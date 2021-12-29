@@ -1,0 +1,17 @@
+{
+  "name": "webscrape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gitignore": "^0.7.0",
+    "puppeteer": "^13.0.0",
+    "requirejs": "^2.3.6"
+  }
+}
