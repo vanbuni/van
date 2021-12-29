@@ -1,0 +1,1 @@
+curl --socks5 localhost:8123 -u username:password https://payfac.vantivcnp.com/legalentity/820433632997732324/submerchant/820433632997741820
