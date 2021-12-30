@@ -178,51 +178,61 @@
 
 // console.log(fibonacci(6))
 // console.log(fibonacci(7))
-function findMiddleIndex(str2) {
-    var middleOfString = Math.floor(str2.length / 2);
-    return middleOfString;
-  }
+// function findMiddleIndex(str2) {
+//     var middleOfString = Math.floor(str2.length / 2);
+//     return middleOfString;
+//   }
   
   
-  str = 'abc'
-  console.log(str.length)
+//   str = 'abc'
+//   console.log(str.length)
   
-  function firtsHalf(str3) {
-    var HalfFirst = str3.slice(0, findMiddleIndex(str3))
-    return HalfFirst;
-  };
-  console.log(firtsHalf("Hello"));
-  console.log(firtsHalf("Hello World"));
+//   function firtsHalf(str3) {
+//     var HalfFirst = str3.slice(0, findMiddleIndex(str3))
+//     return HalfFirst;
+//   };
+//   console.log(firtsHalf("Hello"));
+//   console.log(firtsHalf("Hello World"));
   
   
-  function capHalf(str){
-    if(str.length % 2 === 0){
-        var half = str.toUpperCase().slice(0, findMiddleIndex(str)) + str.slice(findMiddleIndex(str))
-        console.log('working')
-        return half
-    } else if (str.length % 2 != 0){
-        var half2 = str.toLowerCase().slice(0, findMiddleIndex(str)) + str.toUpperCase().slice(findMiddleIndex(str))
-        console.log('working2')
-        return half2
-    }
+//   function capHalf(str){
+//     if(str.length % 2 === 0){
+//         var half = str.toUpperCase().slice(0, findMiddleIndex(str)) + str.slice(findMiddleIndex(str))
+//         console.log('working')
+//         return half
+//     } else if (str.length % 2 != 0){
+//         var half2 = str.toLowerCase().slice(0, findMiddleIndex(str)) + str.toUpperCase().slice(findMiddleIndex(str))
+//         console.log('working2')
+//         return half2
+//     }
       
     
     
-  }
-  console.log(capHalf("test"))
-  console.log(capHalf("test2"))
+//   }
+//   console.log(capHalf("test"))
+//   console.log(capHalf("test2"))
   
-  function white_space(input) {
-    var words = input.split(' ');
-    var CapitalizedWords = [];
-    words.forEach(element => {
-    CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));
-    });
-    console.log( CapitalizedWords.join(' '))
-    console.log(words);
-    }
-  
-  
-  white_space("Hey how are you")
+//   function white_space(input) {
+//     var words = input.split(' ');
+//     var CapitalizedWords = [];
+//     words.forEach(element => {
+//     CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));
+//     });
+//     console.log( CapitalizedWords.join(' '))
+//     console.log(words);
+//     }
   
   
+//   white_space("Hey how are you")
+  
+  
+
+const test = 6
+
+switch (test){
+  case test :
+    console.log('Test is greater');
+    break;
+  case test :
+    console.log('Test is less');
+}
