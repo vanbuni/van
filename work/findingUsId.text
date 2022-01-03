@@ -1,0 +1,3 @@
+select substring(convert_from(decode(m.encrypted_password, 'base64'), 'UTF8') from 
+'(.*):') from dashboard_user du join membership m on du.id=m.dashboard_user_id where 
+du.email_address ilike '%jalfaro@namutek.com%';
