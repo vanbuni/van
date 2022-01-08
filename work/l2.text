@@ -1,0 +1,10 @@
+curl https://finix.live-payments-api.com/applications/APw18bW2H2q5qpHx1X8Wf9CL/processors/LITLE_V1 \
+    -H "Content-Type: application/vnd.json+api" \
+    -u  USg7jMQv438shCp5WvWprxbv:ef87084e-b38b-47f2-9358-923fd8a3987d \
+    -X PUT \
+    -d '
+    {
+        "application_config": {
+            "default_level_two_level_three_data_enabled": true
+        }
+    }'
