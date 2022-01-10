@@ -3,10 +3,10 @@ from hangman_words import word_list
 from hangman_art import stages
 
 end_of_game = False
-# word_list = ["ardvark", "baboon", "camel"]
+
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
-print(f'Pssst, the solution is {chosen_word}.')
+# print(f'Pssst, the solution is {chosen_word}.')
 lives = 6
 
 

@@ -23,7 +23,20 @@ const flags = {
 		type: `boolean`,
 		alias: `v`,
 		desc: `Print CLI version`
+	},
+	type: {
+		type: 'string',
+		alias: 't',
+		default: 'ditto',
+		desc: 'What kind of poke'
 	}
+	// },
+	// type: {
+	// 	type: 'string',
+	// 	alias: 't',
+	// 	default: 'nerdy',
+	// 	desc: 'What kind of joke do you want? [explicit|nerdy]'
+	// }
 };
 
 const commands = {
@@ -44,3 +57,4 @@ const options = {
 };
 
 module.exports = meow(helpText, options);
+//./index.js -t "pikachu"

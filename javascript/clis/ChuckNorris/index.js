@@ -14,15 +14,21 @@ const axios = require('axios');
 const input = cli.input;
 const flags = cli.flags;
 const { clear, debug } = flags;
-
+console.log(flags);
 (async () => {
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
 
 	debug && log(flags);
 
-if(input.includes('joke')){
-	const res = await axios.get('https://api.chucknorris.io/jokes/random')
-	console.log(res.data.value);
-}
+const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${flags.type}`)
+
+console.log(res.data);
+var poke = input.value
+
+
+// if(input.includes('joke')){
+// 	const res = await axios.get(`http://api.icndb.com/jokes/random?limitTo=[${flags.type}]`)
+// 	console.log(res.data.value.joke);
+// }
 })();
