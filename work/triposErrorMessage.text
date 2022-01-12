@@ -1,0 +1,11 @@
+SELECT
+ platform_id,
+ processing.base58_encode ('DV',
+  device_id),
+  device_id,
+ t.params -> 'processor' -> 'response' -> 'raw_response' -> '_errors' -> 0 ->> 'developer_message'
+FROM
+ processing.transfers_v2 t
+WHERE
+ t.params -> 'processor' -> 'response' -> 'raw_response' -> '_errors' -> 0 ->> 'developer_message' ILIKE '%Url /socketapi/gateway/sendasync is invalid%'
+LIMIT 10;
