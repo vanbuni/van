@@ -1,0 +1,10 @@
+curl https://finix.live-payments-api.com/users \
+        -H "Content-Type: application/vnd.json+api" \
+        -u  US8bRKYjD2V79U64UDKTqLhP \
+        -d '{
+        "role": "ROLE_PLATFORM",
+          "platform_id": "PLktk15sfwDM9MYyHtsdXA11",
+        "tags": {
+        "user": "van.bradley@finixpayments.com"
+        }
+      }'

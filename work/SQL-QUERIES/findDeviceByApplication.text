@@ -1,0 +1,11 @@
+SELECT base58_encode ('DV', id),
+base58_encode('AP', application_id),
+name,
+serial_number,
+enabled,
+created_at,
+updated_at
+FROM
+processing.device
+WHERE
+application_id = 'f7ca7483-1498-44a3-b585-a8c932dac2f4';

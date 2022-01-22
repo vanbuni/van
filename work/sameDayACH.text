@@ -1,0 +1,201 @@
+curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POsQvatMxjsEU6jPU1Ajccph \
+     -H "Content-Type: application/vnd.json+api" \
+     -u USg7jMQv438shCp5WvWprxbv:ef87084e-b38b-47f2-9358-923fd8a3987d \
+     -X PATCH \
+     -d '{
+        "templates": [
+            {
+                "action": "DELETE",
+                "template_id": "PTsQD1p3SbkDDUPnfHPK9hoK",
+                "data": {}
+            },
+            {
+                "action": "DELETE",
+                "template_id": "PTsQFmY8iFeqTj2qxqVwLM5U",
+                "data": {}
+            },
+            {
+                "action": "DELETE",
+                "template_id": "PTsQHG7K7zbV3TQJQcZvME1N",
+                "data": {}
+            },
+            {
+                "action": "CREATE",
+                "data": {
+                    "name": "PLATFORM_FEES",
+                    "level": "PLATFORM",
+                    "source_instrument_label": "PAYFAC_FBO",
+                    "destination_instrument_label": "PLATFORM_BANK_ACCOUNT",
+                    "rail": "PAYFAC_CREDIT",
+                    "split_percentage": 100,
+                    "config": {
+                        "fee": {
+                            "includes": [
+                                "*"
+                            ],
+                            "excludes": []
+                        }
+                    }
+                }
+            },
+            {
+                "action": "CREATE",
+                "data": {
+                    "name": "PLATFORM_DISPUTES_AND_ADJUSTMENTS",
+                    "level": "PLATFORM",
+                    "source_instrument_label": "PAYFAC_FBO",
+                    "destination_instrument_label": "PLATFORM_BANK_ACCOUNT",
+                    "rail": "PAYFAC_CREDIT",
+                    "split_percentage": 100,
+                    "config": {
+                        "dispute_transfer": {
+                            "includes": [
+                                "PLATFORM_CREDIT",
+                                "PLATFORM_DEBIT"
+                            ],
+                            "excludes": []
+                        },
+                        "adjustment": {
+                            "includes": [
+                                "PLATFORM_CREDIT_ADJUSTMENT",
+                                "PLATFORM_DEBIT_ADJUSTMENT"
+                            ],
+                            "excludes": []
+                        }
+                    }
+                }
+            },
+            {
+                "action": "CREATE",
+                "data": {
+                    "name": "MERCHANT_FUNDING_DATA",
+                    "level": "MERCHANT",
+                    "source_instrument_label": "PAYFAC_FBO",
+                    "destination_instrument_label": "MERCHANT_BANK_ACCOUNT",
+                    "rail": "PAYFAC_CREDIT",
+                    "split_percentage": 100,
+                    "fee_default": true,
+                    "config": {
+                        "transfer": {
+                            "includes": [
+                                "*"
+                            ],
+                            "excludes": []
+                        },
+                        "dispute_transfer": {
+                            "includes": [
+                                "*"
+                            ],
+                            "excludes": [
+                                "PLATFORM_CREDIT",
+                                "PLATFORM_DEBIT"
+                            ]
+                        },
+                        "reverse": {
+                            "includes": [
+                                "*"
+                            ],
+                            "excludes": []
+                        },
+                        "adjustment": {
+                            "includes": [
+                                "*"
+                            ],
+                            "excludes": [
+                                "PLATFORM_CREDIT_ADJUSTMENT",
+                                "PLATFORM_DEBIT_ADJUSTMENT"
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "combination_plans": [
+            {
+                "action": "DELETE",
+                "combination_plan_id": "CPsQQhK5TTTHJrmrAVpRBDRj",
+                "data": {}
+            },
+            {
+                "action": "DELETE",
+                "combination_plan_id": "CPsQSpVSYd1H8ALJ7WEPoe6P",
+                "data": {}
+            },
+            {
+                "action": "CREATE",
+                "data": {
+                    "name": "MERCHANT_FUNDING_INSTRUCTION",
+                    "level": "MERCHANT",
+                    "source_instrument_label": "PAYFAC_FBO",
+                    "destination_instrument_label": "MERCHANT_BANK_ACCOUNT",
+                    "rail": "SAME_DAY_ACH",
+                    "equation": "MERCHANT_FUNDING_DATA",
+                    "submission_settings": {
+                        "type": "IMMEDIATE"
+                    }
+                }
+            },
+            {
+                "action": "CREATE",
+                "data": {
+                    "name": "PLATFORM_FUNDING_INSTRUCTION",
+                    "level": "PLATFORM",
+                    "source_instrument_label": "PAYFAC_FBO",
+                    "destination_instrument_label": "PLATFORM_BANK_ACCOUNT",
+                    "rail": "PAYFAC_CREDIT",
+                    "equation": "PLATFORM_DISPUTES_AND_ADJUSTMENTS",
+                    "submission_settings": {
+                        "type": "IMMEDIATE"
+                    }
+                }
+            },
+            {
+                "action": "CREATE",
+                "data": {
+                    "name": "PLATFORM_FUNDING_INSTRUCTION_FEES",
+                    "level": "PLATFORM",
+                    "source_instrument_label": "PAYFAC_FBO",
+                    "destination_instrument_label": "PLATFORM_BANK_ACCOUNT",
+                    "rail": "PAYFAC_CREDIT",
+                    "equation": "PLATFORM_FEES",
+                    "submission_settings": {
+                        "type": "IMMEDIATE"
+                    }
+                }
+            },
+            {
+                "action": "CREATE",
+                "data": {
+                    "name": "MERCHANT_FUNDING_INSTRUCTION_FEES_DEBIT",
+                    "level": "MERCHANT",
+                    "source_instrument_label": "MERCHANT_BANK_ACCOUNT",
+                    "destination_instrument_label": "PAYFAC_FBO",
+                    "rail": "PAYFAC_CREDIT",
+                    "equation": "PLATFORM_FEES",
+                    "submission_settings": {
+                        "type": "IMMEDIATE"
+                    }
+                }
+            }
+        ],
+        "schedules": [
+            {
+                "type": "CONTINUOUS",
+                "timezone": "America/New_York",
+                "template_names": [
+                    "MERCHANT_FUNDING_DATA"
+                ]
+            },
+            {
+                "type": "MONTHLY",
+                "timezone": "America/New_York",
+                "auto_close_offset_hours": 13,
+                "auto_close_offset_minutes": 0,
+                "auto_close_offset_days": 3,
+                "template_names": [
+                    "PLATFORM_DISPUTES_AND_ADJUSTMENTS",
+                    "PLATFORM_FEES"
+                ]
+            }
+        ]
+        }'
