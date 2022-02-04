@@ -1,4 +1,4 @@
-curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POsQvatMxjsEU6jPU1Ajccph \
+curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POAWTDU5MhunLTSjvquwayX \
      -H "Content-Type: application/vnd.json+api" \
      -u USg7jMQv438shCp5WvWprxbv:ef87084e-b38b-47f2-9358-923fd8a3987d \
      -X PATCH \
@@ -6,17 +6,17 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POsQvatM
         "templates": [
             {
                 "action": "DELETE",
-                "template_id": "PTsQD1p3SbkDDUPnfHPK9hoK",
+                "template_id": "PTBkGzoLbAakPP9fJmjfpk3",
                 "data": {}
             },
             {
                 "action": "DELETE",
-                "template_id": "PTsQFmY8iFeqTj2qxqVwLM5U",
+                "template_id": "PTBC3oZMGaznof562T9KYqf",
                 "data": {}
             },
             {
                 "action": "DELETE",
-                "template_id": "PTsQHG7K7zbV3TQJQcZvME1N",
+                "template_id": "PTBGk7mnqXwYqcwz7e9MR74",
                 "data": {}
             },
             {
@@ -113,12 +113,22 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POsQvatM
         "combination_plans": [
             {
                 "action": "DELETE",
-                "combination_plan_id": "CPsQQhK5TTTHJrmrAVpRBDRj",
+                "combination_plan_id": "CPBR5RVZGSPAG7P6LqNZK46",
                 "data": {}
             },
             {
                 "action": "DELETE",
-                "combination_plan_id": "CPsQSpVSYd1H8ALJ7WEPoe6P",
+                "combination_plan_id": "CPBTKjPXgAhrQ9Z8QEKmpPw",
+                "data": {}
+            },
+            {
+                "action": "DELETE",
+                "combination_plan_id": "CPBWaPhRTbPdR97jtHqaLSL",
+                "data": {}
+            },
+            {
+                "action": "DELETE",
+                "combination_plan_id": "CPBYDZPhu5F7fYeLHiioBp1",
                 "data": {}
             },
             {
@@ -199,3 +209,6 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POsQvatM
             }
         ]
         }'
+
+
+

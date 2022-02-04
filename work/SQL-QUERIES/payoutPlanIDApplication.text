@@ -1,0 +1,120 @@
+Step 1: POxxx
+
+
+SELECT
+processing.base58_encode ('PO',
+    p.id)
+FROM
+settlement.payout_plans p
+WHERE
+p.application_id = 'APPLICATION_ID'
+AND p.active = TRUE
+AND p.level = 'APPLICATION'
+AND p.processor = 'PROCESSOR';
+
+
+Step 2: PTxxx
+
+
+SELECT
+	processing.base58_encode ('PT',
+		p.id)
+FROM
+	settlement.application_payout_plan_templates p
+WHERE
+	p.payout_plan_id = 'PAYOUT_PLAN_ID';
+
+
+
+Step 3: CPxxx
+
+    SELECT
+	processing.base58_encode ('CP',
+		p.id)
+FROM
+	settlement.application_combination_plan_templates p
+WHERE
+	p.payout_plan_id = 'PAYOUT_PLAN_ID';
+
+
+
+VANTIV_V1
+PO: POc18gwXu7dDgZinJZjFXN25 /59190114-3b3b-11ec-9397-df89a4f2363e
+PT:PTc1doAKQgFcgCvup4t1kPbb
+PT:PTc1dXzYx2XJPXbEaWZvqtoL
+PT:PTc1egiNkKJmBLPhvwez7QSX
+CP:CPc1j9iktmcRtvrsq22H5xFg
+CP:CPc1jBvHN2HFRAX2dZnd4Hxi
+
+
+
+LITLE_V1
+PO: PO6bZtMax5SNz55kd5oZejA1 /2a068dbc-7a3b-11ec-be63-07947dcb9694
+PT: PT6cqcLt9PfuuLKr5sJQsGym
+PT: PT6csRPd8XESVWHQ2HHH9SaM
+PT: PT6cvirtugrVJfr71FKjtFMN
+CP: CP6cyCpqXE93z4vKSUYhnpy4
+CP: CP6cBCe6ZJ8fyez6Tsx2ogHs
+CP: CP6cDKpU53feXoZozsECanQr
+CP: CP6cHqNgvUcFcp9KxbtVVa6D
+
+
+
+MUisJcDTsQW9VSFReG4azsg3
+POfaZrSWWAb2vG6Kn7Bvck8z
+PTfb725Q6iWx8qdHh647teGt
+PTfb9prbU3Hkei9G6zPnfMce
+PTfbbDnsoJz59TcnfZA2ZbkQ
+CPfbjHGEGEU23AkWv1YB3vZy
+CPfbnV9b3CBA9mpf4JGqNpd7
+CPfbq2quCnXtXs2rF9goLG4k
+CPfbs2qPZXd4goPshHY7zEZC
+
+MUx9k34VLT5BS9gzC44CkMBf
+POetgiHngGPQEv4dUvVJcGZm
+PTetowKZGL2VgThNmY9Bc3De
+PTetr8Aao7NpBWdqJzdwj7Mk
+PTett9ntsKhM9vpqM8whBeA3
+CPetyNu3K2Wo9UimSREXv2DR
+CPetB2ub8gkRbLFFnPR5Y1hH
+
+MU29Wc5ticFXds2GdBs1fmFy
+POmVAusP7dWWugz2e96u1q8o
+PTmVJKzxMdq6ECA6hhtcGApi
+PTmVXt12Hwhy75YpTAStzQiX
+PTmVZDmUaMxF8TD6VpFGHvUq
+CPmW4ZQtPePUBs7fgX1ySbes
+CPmWhWBzuQMYzuq6B4RzvV41
+CPmWkgB2UkwZ4YXYHvWVSuwA
+CPmWnrkfJZWcpqz1N4iUDS1C
+
+
+MU8fLSy9dEEwJ5hUVUt2Fzfv
+POaBXNM9vGvVVoBvWvv3HcDd
+PTaC1YbnVpgTpN9yG4aq2N9N
+PTaC4RazFquNXzYKX7bc98P6
+PTaC73WULhGe4d3aTbMKhzPt
+CPaC9Cns7Zn1ugvdV4o1QC3T
+CPaCcjqNqv4Qe98BGWuo4653
+CPaCeEwoDNjbrgxpxgEnRfWu
+CPaCgS8J2jswGYpgSe2GdH2t
+
+MUwsPrpkWs9eaKgntkGUeT7K
+POcQf9gm57fZaCna69X6fGdy
+PTcQq2MGLF27LYyXH1z9hKLq
+PTcQwkvGoaGSkNDq3v63GXMW
+PTcQz97RLPqctwQpkHbWksv6
+CPcQDcEqCy1cwJ14LxqW9bod
+CPcQR2FTcZBejnhvngtJP7uh
+CPcQToL7tzPBSGa4ch9NmjtF
+CPcQVYxtyVr87pXjnRRBW84p
+
+MU3jGGMaRXSfCe6DtZX4XKSM
+POAWTDU5MhunLTSjvquwayX
+PTBkGzoLbAakPP9fJmjfpk3
+PTBC3oZMGaznof562T9KYqf
+PTBGk7mnqXwYqcwz7e9MR74
+CPBR5RVZGSPAG7P6LqNZK46
+CPBTKjPXgAhrQ9Z8QEKmpPw
+CPBWaPhRTbPdR97jtHqaLSL
+CPBYDZPhu5F7fYeLHiioBp1

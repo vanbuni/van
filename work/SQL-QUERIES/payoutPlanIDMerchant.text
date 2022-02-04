@@ -1,0 +1,33 @@
+Merchant POxx
+
+SELECT
+	processing.base58_encode ('PO',
+		p.id)
+FROM
+	settlement.payout_plans p
+WHERE
+	p.entity_id = 'MERCHANT_ID'
+	AND p.active = TRUE
+	AND p.level = 'MERCHANT'
+	AND p.processor = 'PROCESSOR';
+
+Merchant PTxxx
+
+SELECT
+	processing.base58_encode ('PT',
+		p.id)
+FROM
+	settlement.merchant_payout_plan_templates p
+WHERE
+	p.payout_plan_id = 'PAYOUT_PLAN_ID';
+
+Merchant CPxxx
+
+SELECT
+	processing.base58_encode ('CP',
+		p.id)
+FROM
+	settlement.merchant_combination_plan_templates p
+WHERE
+	p.payout_plan_id = 'PAYOUT_PLAN_ID';
+  
