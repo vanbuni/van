@@ -1,4 +1,4 @@
-curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POt9xp9kL3ed5BstfH3kYVpM \
+curl https://finix.live-payments-api.com/settlement_engine/payout_plans/PO66CrV6zeu4PYEQi1U24rnx \
      -H "Content-Type: application/vnd.json+api" \
      -u USg7jMQv438shCp5WvWprxbv:ef87084e-b38b-47f2-9358-923fd8a3987d \
      -X PATCH \
@@ -6,17 +6,17 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POt9xp9k
     "templates": [
         {
             "action": "DELETE",
-            "template_id": "PTt9DZYkSAEfTJ2YfY4NHnJD",
+            "template_id": "PT66JP5a8GoxLjN2nc2SNxyH",
             "data": {}
         },
         {
             "action": "DELETE",
-            "template_id": "PTt9GudcwYUtorAD2YcXFd56",
+            "template_id": "PT66NWghzzL7tr1hJLcDQtHK",
             "data": {}
         },
         {
             "action": "DELETE",
-            "template_id": "PTt9JjRtb6X8txUU6A24KFKx",
+            "template_id": "PT66RvhvgNYpDmkHxRX4mANG",
             "data": {}
         },
         {
@@ -113,22 +113,12 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POt9xp9k
     "combination_plans": [
         {
             "action": "DELETE",
-            "combination_plan_id": "CPt9QypV4pG7UHm6WDfGnFES",
+            "combination_plan_id": "CP66VXmVzZYhtdLZSrzGv6fn",
             "data": {}
         },
         {
             "action": "DELETE",
-            "combination_plan_id": "CPt9Sx3hJdwaBjxMGwSotdn9",
-            "data": {}
-        },
-        {
-            "action": "DELETE",
-            "combination_plan_id": "CPt9UexhWfyXpQHcivXMjRQB",
-            "data": {}
-        },
-        {
-            "action": "DELETE",
-            "combination_plan_id": "CPt9W1ZDTtCTHtQUqKdCha3K",
+            "combination_plan_id": "CP66Z524U7HLTM4wtC4EU8nX",
             "data": {}
         },
         {
@@ -138,7 +128,7 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POt9xp9k
                 "level": "MERCHANT",
                 "source_instrument_label": "PAYFAC_FBO",
                 "destination_instrument_label": "MERCHANT_BANK_ACCOUNT",
-                "rail": "PAYFAC_CREDIT",
+                "rail": "SAME_DAY_ACH",
                 "equation": "MERCHANT_FUNDING_DATA-(PLATFORM_FEES)",
                 "submission_settings": {
                     "type": "IMMEDIATE"

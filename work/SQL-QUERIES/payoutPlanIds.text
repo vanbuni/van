@@ -28,7 +28,7 @@ FROM (
     ) AS z (payout_plan_ids, merchant_id, "type")
   JOIN processing.merchants AS mu ON z.merchant_id = mu.id
 WHERE
-  mu.identity_id = data_support.finix_uuid_decode('ID', 'IDckTiKfC1zSDxcqBP3ehGCN')::uuid
+  mu.identity_id = data_support.finix_uuid_decode('ID', 'ID9WLzBLZuLh79nvaJEPyohh')::uuid
 ORDER BY
   CASE "type"
       WHEN 'PO' THEN 1
