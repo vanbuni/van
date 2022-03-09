@@ -1,0 +1,9 @@
+curl https://finix.live-payments-api.com/applications/{APxxx ID}/processors/LITLE_V1 \
+-H "Content-Type: application/vnd.json+api" \
+-u {ROLE_PLATFORM STAX CREDS} \
+-X PUT \
+-d '{
+  "application_config" : {
+    "ach_settlement_delay_days": 0
+      }
+  }'

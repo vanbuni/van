@@ -201,7 +201,7 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POAWTDU5
                 "timezone": "America/New_York",
                 "auto_close_offset_hours": 13,
                 "auto_close_offset_minutes": 0,
-                "auto_close_offset_days": 3,
+                "auto_close_offset_days": 0,
                 "template_names": [
                     "PLATFORM_DISPUTES_AND_ADJUSTMENTS",
                     "PLATFORM_FEES"

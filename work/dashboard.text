@@ -1,10 +1,17 @@
-curl https://finix.live-payments-api.com/users \
+curl https://finix.sandbox-payments-api.com/users \
         -H "Content-Type: application/vnd.json+api" \
-        -u  US8bRKYjD2V79U64UDKTqLhP \
+        -u  US2PQ4duazn9AN4tFGz2Nuhv:4ec87fb5-ba54-43db-8dac-6f2bc302dfa5 \
         -d '{
         "role": "ROLE_PLATFORM",
-          "platform_id": "PLrmBFbxYqKwx7NexjDDN2N9",
+          "platform_id": "PLemVm5tGGqQTTCqtQpC4J5s",
         "tags": {
         "user": "van.bradley@finixpayments.com"
         }
       }'
+
+
+      Change to live 
+      change user:pass as needed
+
+
+ 

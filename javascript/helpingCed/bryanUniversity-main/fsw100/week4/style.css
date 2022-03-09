@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    align-content: center;
+  }
+
+.h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.nav_bar {
+    position: fixed;
+    width: 100%;
+    margin: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 50px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.home {
+    padding: 20px;
+
+}
+
+.about {
+    padding: 20px;
+}
+
+.contacts {
+    padding: 20px;
+    box-sizing: content-box;
+}
+
+.nav_2 {
+    padding: 20px;
+    align-content: center;
+    
+}
+
+
+.image_a {
+    float: left;
+    padding: 0 10px 0 0;
+    width: 325px;
+}
+
+.p_one {
+    padding-top: 70px;
+    display: inline-block;
+
+}
+
+.image_b {
+
+    width: 400px;
+    height: 250px;
+    border-radius: 25%;
+    text-align: center;
+    font-size: 10px;
+    float: left;
+    shape-outside: ellipse();
+    background-color: MediumPurple;
+    background-clip: content-box;
+}
+
+.p_two {
+    padding-top: 70px;
+    display: inline-block;
+}

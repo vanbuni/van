@@ -1,4 +1,6 @@
+
 const express =require('express');
+
 const app = express();
 
 app.get('/', (req,res) =>{
@@ -31,3 +33,12 @@ for(let prop in obj){
 for (let value of array){
     console.log(value);
 }
+
+console.log('Hey');
+
+console.log(10 * 10);
+console.log('You are a mutha fucking monster');
+
+node-fetch('https://swapi.dev/api/people')
+  .then(response => response.json())
+  .then(data => console.log(data));

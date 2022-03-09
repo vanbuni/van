@@ -1,0 +1,47 @@
+body {
+    background-color:cyan;
+}
+
+.head__line1 {
+    font-style: Georgia;
+    text-align: center;
+    color: blue;
+}
+
+.head__line2 {
+    font-family: Georgia;
+    color: green;
+}
+
+p {
+    line-height: 20px;
+}
+
+
+.head__line3 {
+    font-family: Georgia;
+    color: green;
+}
+
+.head__line4 {
+    font-family: Georgia;
+    color: green;
+    text-transform: uppercase;
+}
+a, u {
+    text-decoration: none;  
+}
+
+img {
+    float: left;
+    padding: 10px;
+}
+
+ol {
+    list-style-type: disc;
+  }
+
+a.hover:hover{
+    text-decoration: underline;  
+}
+

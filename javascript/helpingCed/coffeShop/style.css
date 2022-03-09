@@ -1,0 +1,27 @@
+img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    
+}
+button{
+    margin-top: 70px;
+}
+/* #popUp{
+    display: inline;
+    border: 1px solid black;
+    color: red;    
+} */
+#header{
+    text-align: center;
+}
+#popUp{
+    text-align: center;
+    border: 1px solid red;
+    visibility: hidden;
+    
+    
+ 
+}
+    
+    
