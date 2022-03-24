@@ -1,4 +1,4 @@
-curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POo13HsspPBxonWQ32VNgxB4 \
+curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POxgEPWeAuXEsdFRDErezhNg \
      -H "Content-Type: application/vnd.json+api" \
      -u USg7jMQv438shCp5WvWprxbv:ef87084e-b38b-47f2-9358-923fd8a3987d \
      -X PATCH \
@@ -6,17 +6,17 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POo13Hss
     "templates": [
         {
             "action": "DELETE",
-            "template_id": "PTo18CTA99v97BdSvfVxEmPQ",
+            "template_id": "PTxgMfFwvkimrb89KdXNXwzw",
             "data": {}
         },
         {
             "action": "DELETE",
-            "template_id": "PTo1buuQcpix44sKbHKaftmo",
+            PTxgNCPdZ6T2AFEcdh8LABco",
             "data": {}
         },
         {
             "action": "DELETE",
-            "template_id": "PTo1caNx3bcaz1LscHfPY2zb",
+            "template_id": "PTxgPa3whkjvWk9JoqN5Kgwt",
             "data": {}
         },
         {

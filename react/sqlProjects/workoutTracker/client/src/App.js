@@ -1,77 +1,89 @@
-
+//npm start to run app
 
 import './App.css';
 import React, { useState } from 'react';
 import axios from 'axios'
-
+import AddUser from './AddUsers/AddUser';
+import AddWorkouts from './AddWorkouts/AddWorkouts';
+import GetWorkout from './GetWorkouts/GetWorkout';
+import GetUsers from './GetUsers/GetUsers';
+import GetUserWorkouts from './GetUserWorkouts/GetUserWorkouts';
+import Navbar from './Container/Navbar';
+import AddMeasurements from './AddMeasurements/AddMeasurements';
+import Footer from './Container/Footer';
+import GetMeasurements from './GetMeasurements/GetMeasurements';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 function App() {
-
-const [name, setName] = useState('');
-const [userList, setUserList] = useState([]);
-const [workouts, setWorkouts] = useState([])
-
-const addUser = () => {
-  axios.post('http://localhost:3001/createUsers', {
-    name: name
-  }).then (() =>{
-    setUserList([...userList],{
-      name: name
-    })
-  })
-}
-
-  const getUsers = () => {
-    axios.get('http://localhost:3001/users').then((response) => {
-      setUserList(response.data)
-      console.log(response.data)
-
-    })
-  }
-
-  const getWorkouts = () => {
-    axios.get('http://localhost:3001/workouts').then((response) => {
-      setWorkouts(response.data)
-      console.log(response.data)
-
-    })
-  }
-
-// const addWorkout = () => {
-//   axios.post('http://localhost:3001/createWorkout',{
-//     body_group: body_group,
-//     intensity: intensity,
-//     user_id: user_id
-
-//   }). then (() =>{
+  const [userList, setUserList] = useState([]);
+  
     
-//   })
-// }
+
 
 
   return (
+    <Router>
+      <>
+      <Navbar/>
+    <h1>Workout Tracker</h1>
+    <div>
+      <Switch>
+        <Route exact path='/'>
+      <AddUser/>
+      </Route>
+      </Switch>
+      <Switch>
+        <Route path= '/addWorkout'>
+      <AddWorkouts/>
+      </Route>
+      </Switch>
+      <Switch>
+        <Route path='/getWorkouts'>
+      <GetWorkout/>
+      </Route>
+      </Switch>
+      <Switch>
+        <Route path='/getUsers'>
+      <GetUsers/>
+      </Route>
+      </Switch>
+      <Switch>
+        <Route path='/getUserWorkouts'>
+      <GetUserWorkouts/>     
+      </Route>
+      </Switch>
+      <Switch>
+        <Route path='/createMeasurements'>
+         <AddMeasurements/>     
+      </Route>
+      </Switch>
+      <Switch>
+        <Route path="/measurements">
+         <GetMeasurements/>     
+      </Route>
+      </Switch>
     
-     <div>
-     <button onClick={() => getUsers()}>Get Users</button>
-      {userList.map((val,key)=>{
-        return <h1>{val.name}</h1>
-        
-       })}
-     <button onClick={() => getWorkouts()}>Get Workouts</button>
-      {workouts.map((val,key)=>{
-        return <> <p>{val.body_group}</p> <p>{val.intensity}</p> <p>{val.user_id}</p></>
-        
-       })}
-      <h5>Add A User</h5>
-      <label>Name:</label>
-      <input
-        type="text"
-        onChange={(event)=>{
-          setName(event.target.value)
-        }}/>
-      <button onClick={addUser}>Add User</button>
-     </div>
     
-  );
+     
+       
+    </div>
+    <Footer/>
+    </>
+    </Router>
+   
+ );
 }
 
 export default App;
+
+
+  
+  
+
+  
+ 
+
+
+
+
+
+
