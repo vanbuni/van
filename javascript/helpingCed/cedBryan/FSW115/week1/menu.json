@@ -1,0 +1,63 @@
+{
+    "Appetizers":[
+        {
+            "Name": "Wings",
+            "Ingredients": ["Chicken", "Batter", "Hot Sauce"],
+            "Description": "Hot Wings"
+        },
+        {
+            "Name": "Cheese Tater Tots",
+            "Ingredients": ["Potatoes", "Cheese", "Batter"],
+            "Description": "Cheesy Tater Tots"
+        }
+    ],
+    "Cold Sandwiches":[
+        {
+            "Name": "Chicken Sandwich",
+            "Ingredients": ["Chicken", "Cheese", "Bread"],
+            "Description": "Cold Chicken Sandwich"
+        },
+        {
+            "Name": "Bologna Sandwich",
+            "Ingredients": ["Bologna", "Bread", "Cheese"],
+            "Description": "Cold Bologna Sandwich"
+        }
+    ],
+    "Hot Sandwiches":[
+        {
+            "Name": "Grilled Cheese",
+            "Ingredients": ["Bread", "Butter", "Cheese"],
+            "Description": "Hot Grilled Cheese Sandwich"
+        },
+        {
+            "Name": "Cheese Burger",
+            "Ingredients": ["Beef", "Bread", "Tomatoes"],
+            "Description": "American Beef Cheese Burger"
+        }
+    ],
+    "Dessert":[
+        {
+            "Name": "Pie",
+            "Ingredients": ["Apple", "Cinnamon", "Sugar"],
+            "Description": "American Apple Pie"
+        },
+        {
+            "Name": "Ice Cream",
+            "Ingredients": ["Milk", "Sugar", "Nuts"],
+            "Description": "Rocky Road Ice Cream"
+        }
+    ],
+    "Drinks":[
+        {
+            "Name": "Jack and Coke",
+            "Ingredients": ["Jack Daniels", "Coke", "Ice"],
+            "Description": "Hot Wings"
+        },
+        {
+            "Name": "Beer",
+            "Ingredients": ["Bud Light", "Modelo", "Blue Moon"],
+            "Description": "We have 3 Beer Options!"
+        }
+    ]
+    
+}

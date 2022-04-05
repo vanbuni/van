@@ -1,4 +1,4 @@
-curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POxgEPWeAuXEsdFRDErezhNg \
+curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POmZ2Xr8SbxcPv8t9gbtJ3VG \
      -H "Content-Type: application/vnd.json+api" \
      -u USg7jMQv438shCp5WvWprxbv:ef87084e-b38b-47f2-9358-923fd8a3987d \
      -X PATCH \
@@ -6,17 +6,17 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POxgEPWe
     "templates": [
         {
             "action": "DELETE",
-            "template_id": "PTxgMfFwvkimrb89KdXNXwzw",
+            "template_id": "PTmZ6MiLaPACZVQMg2LRMgin",
             "data": {}
         },
         {
             "action": "DELETE",
-            PTxgNCPdZ6T2AFEcdh8LABco",
+            "template_id": "PTmZaAupC5rNSFKVD6wipZdV",
             "data": {}
         },
         {
             "action": "DELETE",
-            "template_id": "PTxgPa3whkjvWk9JoqN5Kgwt",
+            "template_id": "PTmZdwHRiLZNPfv9ugLYUinE",
             "data": {}
         },
         {
@@ -113,22 +113,22 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POxgEPWe
     "combination_plans": [
         {
             "action": "DELETE",
-            "combination_plan_id": "CPo1fhwQU28AKGHDVkjTv8Xf",
+            "combination_plan_id": "CPmZfn78nSXSau27oEvB1Mh4",
             "data": {}
         },
         {
             "action": "DELETE",
-            "combination_plan_id": "CPo1ruREi17NdPWDFUi8YUni",
+            "combination_plan_id": "CPmZj8gRRzTo5FXgzQRYemZ1",
             "data": {}
         },
         {
             "action": "DELETE",
-            "combination_plan_id": "CPo1tyXnR38bUiHiHEoke7k9",
+            "combination_plan_id": "CPmZk4RMUm8wvYeHTu4sJB59",
             "data": {}
         },
         {
             "action": "DELETE",
-            "combination_plan_id": "CPo1ugi3XTkdnLdgLPoHb5k2",
+            "combination_plan_id": "CPmZmEvNbzdEo8yPpn7U7ysm",
             "data": {}
         },
         {

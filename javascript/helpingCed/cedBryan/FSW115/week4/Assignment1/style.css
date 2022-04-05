@@ -1,0 +1,21 @@
+#new_todo{
+    
+    text-align: center;
+    
+}
+body{
+    background-color: grey;
+}
+
+input{
+    border-radius: 10px;
+}
+button{
+    border-radius: 10px;
+}
+.count_div{
+    display: inline;
+}
+.count_div_{
+    display: inline;
+}
