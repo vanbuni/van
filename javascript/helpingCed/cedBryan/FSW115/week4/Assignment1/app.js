@@ -158,11 +158,11 @@ function style(done,todo_div, del, container, complete, date, update_date){
 function delete_todo(del, id, element, div, h3){
 del.addEventListener('click',()=>{
   axios.delete(`http://api.bryanuniversity.edu/lavanbradley/list/${id}`)
-  div.removeChild(element)
-  div.removeChild(h3)
-  getTodos()
-  showData()
-})
+  .then((res) =>{
+    console.log(res);
+    setTimeout(window.location.reload(), 1000)
+  })
+ })
 }
 function complete_todo(done, id, complete){
 done.addEventListener('change', ()=>{
