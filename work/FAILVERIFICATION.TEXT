@@ -1,0 +1,16 @@
+curl https://finix.live-payments-api.com/support \
+-X PUT \
+-u US8bRKYjD2V79U64UDKTqLhP:3431b200-ce66-4d29-a088-5fa5577835ca \
+-H 'Content-Type': 'application/hal+json;charset=UTF-8' \
+-d '{
+"admin_operation_key": "VERIFICATION_UPDATE",
+"entity": {
+    "id": "VIuLspRn1EhYPCSQNFYrk752",
+    "state": "SUBMITTED",
+    "code": "FAILED"
+}
+}'
+
+
+//cred are Role admin production
+//To get the VIXXX search the mu in the verifications table as underwritten_merchant_id, the ID is the VI

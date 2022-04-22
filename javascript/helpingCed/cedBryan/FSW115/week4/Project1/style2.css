@@ -1,0 +1,21 @@
+.container{
+    text-align: center;
+    align-items: center;
+    
+}
+
+table{
+    text-align: center;
+    margin-left: 37%;
+    visibility: hidden;
+    color: lightblue;
+}
+button{
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+    color: red;
+}

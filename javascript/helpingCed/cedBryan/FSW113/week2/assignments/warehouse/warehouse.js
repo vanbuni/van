@@ -55,32 +55,47 @@ parts.forEach((part) =>{
         div_line.appendChild(li_num)
         div_line.appendChild(li_des)
         detailsList.appendChild(div_line)
-
+})
+var b3 = parts.filter((part)=>{
     if(part.aisle === 'B3'){
-
-        if(sp === false){
-            sp = true
-            specialPackaging.innerHTML = 'Special Packaging Required'
-        }
-        specialPackaging.innerHTML += ` Item: ${part.partNbr} / Qty: ${part.qty}`
+        return part.aisle === 'B3'
     }
-
-    if(part.aisle === 'J4'){
-
-        if(hp === false){
-            hp = true
-            hazardousMaterials.innerHTML = 'Hazardous Parts Included \n '
-            hazardousMaterials.innerHTML += 'Get Gloves'
-        }
+}).map((item)=>{
+    if(item.aisle === 'B3' && sp === false){
+        sp = true
+        specialPackaging.innerHTML = 'Special Packaging Required'
     }
-    if(part.aisle === 'H1'){
-        smallItemsOnly.remove()
-    }
+    specialPackaging.innerHTML += ` Item: ${item.partNbr} / Qty: ${item.qty}`      
+})
 
-    if(part.aisle != 'S' || part.aisle != 'T' || part.aisle != 'U'){
+var hazard = parts.some((part)=>{
+    return part.aisle === 'J4'
+})
+if(hazard){
+    if(hp === false){
+        hp = true
+        hazardousMaterials.innerHTML = 'Hazardous Parts Included \n '
+        hazardousMaterials.innerHTML += 'Get Gloves'
+    }
+}
+var basket = parts.every((item)=>{
+    return item === 'H1'
+})
+if(basket){
+    smallItemsOnly.innerText = 'Take a basket and go directly to aisle H1'
+}
+else{
+    smallItemsOnly.remove()
+}
+
+parts.find((item)=>{
+    if(item.aisle === 'S' || item.aisle === 'T' || item.aisle === 'U'){
+        forkiftNeeded.innerText = 'Forklift Needed'
+    }else{
         forkiftNeeded.remove()
     }
-
-    totalItems.innerHTML = `Total number of parts in order: ${count}`
-
 })
+var total = parts.reduce((prevValue, curValue)=>{
+    return prevValue + curValue.qty
+},0)
+totalItems.innerHTML = `Total number of parts in order: ${total}`

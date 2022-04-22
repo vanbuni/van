@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+}
+.movie{
+    border: 1px solid greenyellow;
+}
+
+span{
+    display: block;
+}
+#header{
+    text-align: center;
+    color: yellowgreen;
+}
+button{
+    display: block;
+}

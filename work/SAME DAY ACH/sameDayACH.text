@@ -1,4 +1,4 @@
-curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POmZ2Xr8SbxcPv8t9gbtJ3VG \
+curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POe7Cvs3SeQekcmQgMC7rEYw \
      -H "Content-Type: application/vnd.json+api" \
      -u USg7jMQv438shCp5WvWprxbv:ef87084e-b38b-47f2-9358-923fd8a3987d \
      -X PATCH \
@@ -6,17 +6,17 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POmZ2Xr8
         "templates": [
             {
                 "action": "DELETE",
-                "template_id": "PTmZ6MiLaPACZVQMg2LRMgin",
+                "template_id": "PTe7NzTqHngSACQhp8f9WmCo",
                 "data": {}
             },
             {
                 "action": "DELETE",
-                "template_id": "PTmZaAupC5rNSFKVD6wipZdV",
+                "template_id": "PTe7QkembBcfwMM8iSh6BePx",
                 "data": {}
             },
             {
                 "action": "DELETE",
-                "template_id": "PTmZdwHRiLZNPfv9ugLYUinE",
+                "template_id": "PTe7SBAnY5Cvb3xwq268Y6JL",
                 "data": {}
             },
             {
@@ -113,22 +113,12 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POmZ2Xr8
         "combination_plans": [
             {
                 "action": "DELETE",
-                "combination_plan_id": "CPmZfn78nSXSau27oEvB1Mh4",
+                "combination_plan_id": "CPe7WQLQrekBkLVp5Us7XSJq",
                 "data": {}
             },
             {
                 "action": "DELETE",
-                "combination_plan_id": "CPmZj8gRRzTo5FXgzQRYemZ1",
-                "data": {}
-            },
-            {
-                "action": "DELETE",
-                "combination_plan_id": "CPmZk4RMUm8wvYeHTu4sJB59",
-                "data": {}
-            },
-            {
-                "action": "DELETE",
-                "combination_plan_id": "CPmZmEvNbzdEo8yPpn7U7ysm",
+                "combination_plan_id": "CPe7ZxoENBHp1SWNArH8h2Hb",
                 "data": {}
             },
             {

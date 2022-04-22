@@ -1,0 +1,26 @@
+img{
+    width: 100px;
+    height: 100px;
+}
+.container2 img{
+    display: block;
+}
+.container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    color: white;
+    gap: 10px;
+}
+.container2{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    color: white;
+    gap: 10px;
+}
+body{
+    background-color: black;
+}
+
+.container2 button{
+    display: block;
+}

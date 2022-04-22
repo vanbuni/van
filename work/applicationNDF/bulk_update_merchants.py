@@ -18,7 +18,7 @@ API_PASSWORD = 'ef87084e-b38b-47f2-9358-923fd8a3987d'
 headers = {'content-type': 'application/vnd.json+api'}
 
 merchant_ids = [
-  'APenEUBDSsLRP4xzYJjoD7dz'
+  'APaNFTa9bqDKur95ZcPsgasQ'
 ]
 
 for x in merchant_ids:

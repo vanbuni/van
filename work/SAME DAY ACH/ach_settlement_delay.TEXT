@@ -1,4 +1,4 @@
-curl https://finix.live-payments-api.com/applications/{AP6a1DTR9aPLSXuRACFpDvrF}/processors/LITLE_V1 \
+curl https://finix.live-payments-api.com/merchants/MU8XirrH9FpXWdq7mHDXfe1s/processors/VANTIV_V1 \
 -H "Content-Type: application/vnd.json+api" \
 -u USg7jMQv438shCp5WvWprxbv:ef87084e-b38b-47f2-9358-923fd8a3987d \
 -X PUT \
