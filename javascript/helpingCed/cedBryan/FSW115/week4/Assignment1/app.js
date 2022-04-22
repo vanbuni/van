@@ -3,8 +3,11 @@ var des = document.getElementById('des')
 var add_todo = document.getElementById('add_todo')
 var container = document.getElementById('container')
 var count_div = document.getElementById('count_div')
+
+//Later will be used to toggle the edit feature on and off
 editToggle = false
 
+//Gets data from API and passes the dat to our showData()
 function getTodos(){
   axios.get("http://api.bryanuniversity.edu/lavanbradley/list")
   .then(response =>{
@@ -15,18 +18,24 @@ function getTodos(){
   .catch(error => console.log(error))
   
 }
+//Calling getData()
 getTodos()
 
+//The showData function show's the Data the way I like it.
 function showData(data){
+  //This counter adds up our todos that are set to false. Now we can show the user how many "Open" cases they have.
   var counter = 0
   container.innerHTML = ''
   
-  header = false
   data.forEach((todo) =>{
     if(todo.isComplete === false){
       counter += 1
     }
-    var h3 = document.createElement('h3')
+
+  var h3 = document.createElement('h3')
+  
+  //The header boolean is used to make sure our username only prints once.
+  header = false
   if(header === false){
   var first = todo.user.slice(1,5)
   var fir_letter =todo.user.charAt(0).toUpperCase()
@@ -34,13 +43,10 @@ function showData(data){
   var last_letter = todo.user.charAt(5).toUpperCase()
   container.appendChild(h3)
   h3.innerHTML = `User: ${fir_letter}${first} ${last_letter}${last}`
+  header = true
 }
 count_div.innerHTML = `${counter}`
 
-
-
- 
-  header = true
   var todo_div = document.createElement('div')
   var complete = document.createElement('h5')
   var date = document.createElement('h6')
@@ -51,6 +57,7 @@ count_div.innerHTML = `${counter}`
   done.setAttribute("type", "checkbox")
   var del = document.createElement('button')
   
+  //This is how we toggle the edit on and off
   if(editToggle === false){
     var todo_text = document.createElement('h5')
     var description = document.createElement('h5')
@@ -84,6 +91,7 @@ count_div.innerHTML = `${counter}`
     todo_div.style.backgroundColor ='red'
     
   }
+  //Crosses out our isComplete Boolean
   if(todo.isComplete === true){
     complete.style.textDecoration = 'line-through'
     todo_div.style.backgroundColor = 'grey'
@@ -92,7 +100,7 @@ count_div.innerHTML = `${counter}`
     complete.style.textDecoration = 'none'
     todo_div.style.backgroundColor = 'white'
   } 
-
+  //Our put request attached to our button to update our todo.isComplete to true or false
   done.addEventListener('change', ()=>{
     console.log('test')
      if(todo.isComplete === false){
@@ -109,15 +117,18 @@ count_div.innerHTML = `${counter}`
       })
      }
   })
-  
+  //Style function just cuts down on the lines of code in our showData()
   style(done,todo_div, del,container, complete, date, update_date)
+  //Our delete function
   delete_todo(del, todo._id, todo_div, container, h3)
+  //Our complete todo function
   complete_todo(done, todo._id, todo.isComplete)
+  //Our edit todo function
   editTodo(edit, data, todo_text, description, todo._id)
 })
 
 
-console.log(counter)
+
 }
     
 function editTodo(edit, data,todo_text, description,id){
@@ -155,7 +166,7 @@ function style(done,todo_div, del, container, complete, date, update_date){
   todo_div.appendChild(del)
 }
 
-function delete_todo(del, id, element, div, h3){
+function delete_todo(del, id){
 del.addEventListener('click',()=>{
   axios.delete(`http://api.bryanuniversity.edu/lavanbradley/list/${id}`)
   .then((res) =>{
