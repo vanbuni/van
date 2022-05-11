@@ -7,29 +7,25 @@ con = psycopg2.connect(
     password= 'Van123!braD'
     )
 
-SELECT =  input('SELECT: ')
-FROM = input('FROM: ')
-WHERE = input('WHERE: ')
-ID = input('ID: ')
+query = input()
 
 #cursor
 cur = con.cursor()
 
 #esecute th query
-# cur.execute('SELECT * FROM processing.applications LIMIT 1')
-cur.execute(''' SELECT
-%s FROM
-processing
-.%s
-WHERE
-%s = 
-'%s' '''
-% (SELECT,FROM,WHERE,ID))
+
+cur.execute('''%s'''
+% (query))
 
 rows = cur.fetchall()
+ 
+answer = list(rows)
 
-for r in rows:
-    print(r)
+for item in answer:
+    for i in item:
+        print(i)
+    
+  
 
 cur.close()
 

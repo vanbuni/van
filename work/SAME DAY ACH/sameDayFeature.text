@@ -7,19 +7,7 @@ curl https://internal.live-payments-api.com/applications/APaNFTa9bqDKur95ZcPsgas
     "ready_to_settle_upon": "SUCCESSFUL_CAPTURE"
 }'
 
-
-curl https://internal.live-payments-api.com/applications/APaNFTa9bqDKur95ZcPsgasQ \
- -H 'Accept: application/hal+json' \
- -u USg7jMQv438shCp5WvWprxbv:ef87084e-b38b-47f2-9358-923fd8a3987d \
- -H 'Content-type: application/json' --compressed \
- -X PUT \
- -d '{
-    "fee_ready_to_settle_upon": "RECONCILIATION_ACTIVITY_DATE",
-    "ready_to_settle_upon": "SUCCESSFUL_CAPTURE"
-    }'
-
-
-    curl https://internal.live-payments-api.com/merchants/MU8XirrH9FpXWdq7mHDXfe1s \
+    curl https://internal.live-payments-api.com/merchants/MU2HcAKemB3iFEsWagpHfXmQ \
     -H "Content-Type: application/vnd.json+api" \
     -u  USg7jMQv438shCp5WvWprxbv:ef87084e-b38b-47f2-9358-923fd8a3987d \
     -X PUT \

@@ -1,0 +1,7 @@
+Role admin creds
+
+curl https://finix.live-payments-api.com/support/resubmit_sync/TRhbFBhkxbeRedCjKKBsAKEQ \
+-u US8bRKYjD2V79U64UDKTqLhP:3431b200-ce66-4d29-a088-5fa5577835ca \
+-X PUT \
+--data-raw ''
+

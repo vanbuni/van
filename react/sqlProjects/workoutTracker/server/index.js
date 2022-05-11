@@ -10,6 +10,7 @@ let mm = date.getMonth() + 1;
 let yyyy = date.getFullYear()
 //nodemon index.js to run server
 //Create connection string
+
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -165,6 +166,8 @@ app.delete('/deleteWorkout/:workout_id', (req,res)=>{
 
 
 
+
 app.listen(3001, () => {
   console.log("Server running on PORT 3001");
 })
+

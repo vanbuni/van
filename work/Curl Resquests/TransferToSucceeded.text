@@ -1,0 +1,13 @@
+curl https://finix.live-payments-api.com/support \
+  -u US8bRKYjD2V79U64UDKTqLhP:3431b200-ce66-4d29-a088-5fa5577835ca \
+  -X PUT \
+  -H 'Content-Type: application/hal+json;charset=UTF-8' \
+  -d '{
+  "admin_operation_key": "TRANSFER_UPDATE",
+  "entity": {
+    "id": "TR9saVGESoZnBjNPEkNAAqxg",
+    "state": "SUBMITTED",
+    "code": "SUCCEEDED",
+    "task_type": "TRANSFER"
+  }
+}'

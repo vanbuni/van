@@ -1,4 +1,4 @@
-curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POe7Cvs3SeQekcmQgMC7rEYw \
+curl https://finix.live-payments-api.com/settlement_engine/payout_plans/PO5CJDMC7FfP55A4Mh7wZiEJ \
      -H "Content-Type: application/vnd.json+api" \
      -u USg7jMQv438shCp5WvWprxbv:ef87084e-b38b-47f2-9358-923fd8a3987d \
      -X PATCH \
@@ -6,17 +6,17 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POe7Cvs3
         "templates": [
             {
                 "action": "DELETE",
-                "template_id": "PTe7NzTqHngSACQhp8f9WmCo",
+                "template_id": "PT5CRcxo1UpRjks3xKCxNqAb",
                 "data": {}
             },
             {
                 "action": "DELETE",
-                "template_id": "PTe7QkembBcfwMM8iSh6BePx",
+                "template_id": "PT5CU6xHK47zENxoFfVjT4rE",
                 "data": {}
             },
             {
                 "action": "DELETE",
-                "template_id": "PTe7SBAnY5Cvb3xwq268Y6JL",
+                "template_id": "PT5CXr7Ed9ZqUjPq9orh1UKL",
                 "data": {}
             },
             {
@@ -113,12 +113,12 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POe7Cvs3
         "combination_plans": [
             {
                 "action": "DELETE",
-                "combination_plan_id": "CPe7WQLQrekBkLVp5Us7XSJq",
+                "combination_plan_id": "CP5D4a1hS6XTW5a98ssMCNrr",
                 "data": {}
             },
             {
                 "action": "DELETE",
-                "combination_plan_id": "CPe7ZxoENBHp1SWNArH8h2Hb",
+                "combination_plan_id": "CP5D6nAggV5hxYtK8ZE8m7U4",
                 "data": {}
             },
             {
@@ -128,7 +128,7 @@ curl https://finix.live-payments-api.com/settlement_engine/payout_plans/POe7Cvs3
                     "level": "MERCHANT",
                     "source_instrument_label": "PAYFAC_FBO",
                     "destination_instrument_label": "MERCHANT_BANK_ACCOUNT",
-                    "rail": "SAME_DAY_ACH",
+                    "rail": "FAST_PAYOUT",
                     "equation": "MERCHANT_FUNDING_DATA",
                     "submission_settings": {
                         "type": "IMMEDIATE"

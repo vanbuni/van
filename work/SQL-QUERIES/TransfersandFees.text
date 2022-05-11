@@ -1,9 +1,0 @@
-SELECT
-	t.amount * 0.01 as "TR amount",
-	f.amount * 0.01 as "Fee",
-	f.fee_type,
-	f.sub_type
-FROM
-	processing.fees f
-	JOIN processing.transfers t ON t.id = f.linked_id
-WHERE t.id IN (List transfers-uuid here);

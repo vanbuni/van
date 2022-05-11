@@ -69,6 +69,8 @@ user_name_and_password = 'USg7jMQv438shCp5WvWprxbv:ef87084e-b38b-47f2-9358-923fd
 
 
 
+
+
 if Net_Or_Gross == 'net':
         dailyNet = '''
 curl https://finix.live-payments-api.com/settlement_engine/payout_plans/%s \\

@@ -23,6 +23,7 @@ cur = con.cursor()
 
 #esecute th query
 # cur.execute('SELECT * FROM processing.applications LIMIT 1')
+ 
 cur.execute(''' SELECT
   du.auth0_user_id,
   du.email_address,

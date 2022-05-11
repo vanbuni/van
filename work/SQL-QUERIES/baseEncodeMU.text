@@ -1,1 +1,0 @@
-SELECT base58_encode('MU', ID), mid FROM processing.merchants where MID IN (

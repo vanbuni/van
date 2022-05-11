@@ -1,0 +1,32 @@
+curl https://finix.live-payments-api.com/users \
+        -H "Content-Type: application/vnd.json+api" \
+        -u  US8bRKYjD2V79U64UDKTqLhP:3431b200-ce66-4d29-a088-5fa5577835ca \
+        -d '{
+        "role": "ROLE_PLATFORM",
+          "platform_id": "PLn5Sgsrfx3fwAfFpFXBJgPt",
+        "tags": {
+        "user": "van.bradley@finixpayments.com"
+        }
+      }'
+
+curl https://finix.sandbox-payments-api.com/users \
+      -H "Content-Type: application/vnd.json+api" \
+      -u  US2PQ4duazn9AN4tFGz2Nuhv:4ec87fb5-ba54-43db-8dac-6f2bc302dfa5 \
+      -d '{
+      "role": "ROLE_PLATFORM",
+        "platform_id": "PLkv8jwn7NEBRqzaDe1Qn8fP",
+      "tags": {
+      "user": "van.bradley@finixpayments.com"
+      }
+    }'
+
+    curl https://finix.live-payments-api.com/users \
+        -H "Content-Type: application/vnd.json+api" \
+        -u  {Creds} \
+        -d '{
+        "role": "ROLE_PLATFORM",
+          "platform_id": "PLn5Sgsrfx3fwAfFpFXBJgPt",
+        "tags": {
+        "user": "van.bradley@finixpayments.com"
+        }
+      }'

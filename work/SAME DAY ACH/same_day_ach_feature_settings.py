@@ -6,7 +6,7 @@ from requests import Request, Session
 
 # defining the api-endpoint
 
-base_url = "https://internal.live-payments-api.com/applications/"
+base_url = "https://internal.live-payments-api.com/merchants/"
 
 # end_url = "/processors/VANTIV_V1"
 
@@ -19,7 +19,7 @@ API_PASSWORD = 'ef87084e-b38b-47f2-9358-923fd8a3987d'
 headers = {'content-type': 'application/vnd.json+api'}
 
 merchant_ids = [
-'APaNFTa9bqDKur95ZcPsgasQ'
+'MU7dCRJxtAAWPdXGuVL7pn5V'
 ]
 
 for x in merchant_ids:

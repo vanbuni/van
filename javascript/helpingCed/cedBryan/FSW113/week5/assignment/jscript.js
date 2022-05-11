@@ -12,7 +12,7 @@ let new_student
 // Add am evemt listener that responds to the click of the "print" button by calling a function to instantiate
 //  a new student object, and another function to print the certificate.
 printBtn.addEventListener('click',()=>{
-    console.log(newStudent())
+    newStudent()
     display()
 })
 

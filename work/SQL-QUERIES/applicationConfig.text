@@ -1,1 +1,0 @@
-select * from processing.processors where application_id='f2f69700-b7ee-47c0-8efc-f1aba1c4d524'
