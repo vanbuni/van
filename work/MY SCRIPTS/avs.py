@@ -10,6 +10,7 @@ base_url = "https://internal.live-payments-api.com/risk_profiles/"
 # end_url = "/processors/VANTIV_V1"
 
 # API Keys
+'''Role Platform Creds Here'''
 API_USERNAME = 'USg7jMQv438shCp5WvWprxbv'
 API_PASSWORD = 'ef87084e-b38b-47f2-9358-923fd8a3987d'
 
@@ -17,10 +18,12 @@ API_PASSWORD = 'ef87084e-b38b-47f2-9358-923fd8a3987d'
 
 headers = {'content-type': 'application/vnd.json+api'}
 
+'''RPXXX Here'''
 Risk_Profile_IDS = [
  {'Rpxxx'}
 ]
 
+'''You can either set AVS Failure to true or false'''
 for x in Risk_Profile_IDS:
    # Data sent to API
 
